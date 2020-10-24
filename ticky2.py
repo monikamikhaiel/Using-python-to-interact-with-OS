@@ -22,7 +22,7 @@ def ReadFile():
       elif "ticky: INFO" in line :
         user_info=re.search(r"ticky: INFO .* \(([\w\.]+)\)$", line)
         if not user_info[1] in userDict:
-          userDict[user_info[1]]={"ERROR":1,"INFO":0}
+          userDict[user_info[1]]={"ERROR":0,"INFO":1}
         else:
           userDict[user_info[1]]["INFO"]+=1
         #print(user_info)
